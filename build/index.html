@@ -20,13 +20,13 @@
         <div class="conference-timeline-content">
             <!-- Article -->
             <div class="timeline-article">
-                <div class="content-left-container">
+                <div class="content-left-container js--fadeInLeft">
                     <div class="content-left">
                         <p>When I orbited the Earth in a spaceship, I saw for the first time how beautiful our planet is. Mankind, let us preserve and increase this beauty, and not destroy it! <span class="article-number">01</span></p>
                     </div>
                     <span class="timeline-author">John Doe</span>
                 </div>
-                <div class="content-right-container">
+                <div class="content-right-container js--fadeInRight">
                     <div class="content-right">
                         <p>When I orbited the Earth in a spaceship, I saw for the first time how beautiful our planet is. <span class="article-number">02</span></p>
                     </div>
@@ -41,13 +41,13 @@
 
             <!-- Article -->
             <div class="timeline-article">
-                <div class="content-left-container">
+                <div class="content-left-container js--fadeInLeft">
                     <div class="content-left">
                         <p>When I orbited the Earth in a spaceship, I saw for the first time how beautiful our planet is. Mankind, let us preserve and increase this beauty, and not destroy it! <span class="article-number">01</span></p>
                     </div>
                     <span class="timeline-author">John Doe</span>
                 </div>
-                <div class="content-right-container">
+                <div class="content-right-container js--fadeInRight">
                     <div class="content-right">
                         <p>When I orbited the Earth in a spaceship, I saw for the first time how beautiful our planet is. <span class="article-number">02</span></p>
                     </div>
@@ -62,13 +62,13 @@
 
             <!-- Article -->
             <div class="timeline-article">
-                <div class="content-left-container">
+                <div class="content-left-container js--fadeInLeft">
                     <div class="content-left">
                         <p>When I orbited the Earth in a spaceship, I saw for the first time how beautiful our planet is. Mankind, let us preserve and increase this beauty, and not destroy it! <span class="article-number">01</span></p>
                     </div>
                     <span class="timeline-author">John Doe</span>
                 </div>
-                <div class="content-right-container">
+                <div class="content-right-container js--fadeInRight">
                     <div class="content-right">
                         <p>When I orbited the Earth in a spaceship, I saw for the first time how beautiful our planet is. <span class="article-number">02</span></p>
                     </div>
@@ -85,6 +85,15 @@
     </section>
     <!-- // Vertical Timeline -->
 
+    <script>
+        const timelineArticle = document.querySelector('.timeline-article');
+        const clonedArticle = timelineArticle.cloneNode(true);
+
+        for (var i = 0; i < 10; i++) {
+            console.log("Cloning article element...", clonedArticle);
+            document.querySelector('.conference-timeline-content').append(clonedArticle);
+        }
+    </script>
     <script src="/bundle.js"></script>
 </body>
 
